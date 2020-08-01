@@ -1,7 +1,7 @@
 pipeline {
   agent any
 
-  stages
+  stages{
     stage('build') {
       steps {
         sh 'cd ./java_web_code'
