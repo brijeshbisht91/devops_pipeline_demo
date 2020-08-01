@@ -1,9 +1,12 @@
 pipeline {
   agent any
+  environment{
+    PATH ="/Users/brijeshbisht/.jenkins/workspace/devops_pipeline"
+  }
   stages {
     stage('build') {
       steps {
-        sh './java_web_code'
+        sh '${PATH}/java_web_code'
         sh 'ls'
         sh 'mvn --version'
         sh 'mvn install'
