@@ -19,7 +19,7 @@ pipeline {
           steps {
             echo '..... Test Phase Started :: Testing via Automated Scripts :: ......'
             dir(path: 'integration-testing') {
-              sh 'mvn clean verify -P integration-tes'
+              sh 'mvn clean verify -P integration-test'
             }
 
           }
