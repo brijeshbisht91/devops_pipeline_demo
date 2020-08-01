@@ -1,7 +1,6 @@
 pipeline {
   agent any
-
-  stages{
+  stages {
     stage('build') {
       steps {
         sh 'cd ./java_web_code'
@@ -9,6 +8,10 @@ pipeline {
         sh 'mvn --version'
         sh 'mvn install'
         echo '..... Build Phase Started :: Compiling Source Code :: .....'
+        dir(path: 'java_web_code') {
+          sh 'ls'
+        }
+
       }
     }
 
