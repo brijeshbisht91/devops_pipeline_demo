@@ -15,7 +15,7 @@ pipeline {
           }
         }
 
-        stage('TEST') {
+        stage('test') {
           steps {
             echo '..... Test Phase Started :: Testing via Automated Scripts :: ......'
             dir(path: 'integration-testing') {
